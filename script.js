@@ -19,6 +19,16 @@ let arr = []
 const fibsRecursion = (num) => num >= 2 ? fibsRecursion(num - 1) + fibsRecursion(num - 2) : num;
 console.log(fibsRecursion(8));
 
+
+function fibsRecursionArray(n) {
+  if (n === 0) return [0];
+  if (n === 1) return [0, 1];
+  const arr = fibsRecursionArray(n - 1);
+  return [...arr, arr[n - 1] + arr[n - 2]]
+}
+
+console.log(fibsRecursionArray(3))
+
 let array = [4,1,3,6,7,5,2,8,19,2,1,3,78,3]
 
 function mergeSort(array) {
